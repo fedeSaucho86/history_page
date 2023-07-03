@@ -1,27 +1,34 @@
 from django.contrib import admin
-from vistaprimaria.models import Nivel, Tema
+from vistaprimaria.models import Continente, Tema, Epoca
 
 class TemaInline(admin.TabularInline):
 
     model = Tema
     extra = 0
 
-class NivelAdmin(admin.ModelAdmin):
-    inlines = [TemaInline]
+class EpocaInline(admin.TabularInline):
 
+    model = Epoca
+    extra = 0
+
+class ContinenteAdmin(admin.ModelAdmin):
+    inlines = [EpocaInline]
+
+class EpocaAdmin(admin.ModelAdmin):
+    inlines = [TemaInline]
 
 @admin.register(Tema)
 class TemaAdmin(admin.ModelAdmin):
-    #fields =['nombre', "nivel"]
+    #fields =['nombre', "Continente"]
     #video 1, clase 3
     fieldsets = [
         ("Tema", {"fields": ["nombre"]}),
-        ("Nivel", {"fields": ["nivel"]}),
+        ("Epoca", {"fields": ["epoca"]}),
         (
             "Datos generales",
             {
                 "fields": [
-                    'estado', 'fecha_publicacion_tema'
+                    'estado', 'fecha_publicacion_tema', 'imagen'
                 ]
             },
         ),
@@ -41,5 +48,6 @@ class TemaAdmin(admin.ModelAdmin):
 
 
 
-admin.site.register(Nivel, NivelAdmin)
+admin.site.register(Continente, ContinenteAdmin)
+admin.site.register(Epoca, EpocaAdmin)
 #admin.site.register(Tema, TemaAdmin)

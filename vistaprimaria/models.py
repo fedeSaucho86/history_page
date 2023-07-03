@@ -1,13 +1,23 @@
 from django.db import models
 from django.utils.html import format_html
 
-class Nivel(models.Model):
-    nivel = models.CharField(max_length=200)
-    fecha_publicacion = models.DateTimeField('Fecha de publicación')
-    imagen = models.ImageField(upload_to="nivel/%Y/%m/%d", blank=True, null=True)     
+class Continente(models.Model):
+    continente = models.CharField(max_length=200)
+    imagen = models.ImageField(upload_to="continente/%Y/%m/%d", blank=True, null=True)   
+    descripcion = models.CharField(max_length=1000, default='')
+    def __str__(self,):
+        return self.continente
+    
+class Epoca(models.Model):
+    epoca = models.CharField(max_length=200)
+    imagen = models.ImageField(upload_to="epoca/%Y/%m/%d", blank=True, null=True)
+    descripcion = models.CharField(max_length=1000, default='')
+    continente = models.ForeignKey(
+        Continente, blank=False, null=True, on_delete=models.CASCADE
+    )   
 
     def __str__(self,):
-        return self.nivel + " lectivo" 
+        return self.epoca
 
 #AGREGAR VARIEDAD DE CURSO   
 class Tema(models.Model):
@@ -21,10 +31,11 @@ class Tema(models.Model):
     estado = models.CharField(max_length=10, choices=APROBACION_PRODUCTO, default='Borrador')
     nombre = models.CharField(max_length=100, db_index=True)
     fecha_publicacion_tema = models.DateTimeField('Fecha de Publicación')
+    imagen = models.ImageField(upload_to="tema/%Y/%m/%d", blank=True, null=True) 
     slug = models.SlugField(max_length=100, db_index=True)
-    #nivel = models.ManyToManyField(Nivel)
-    nivel = models.ForeignKey(
-        Nivel, blank=False, null=True, on_delete=models.CASCADE
+    descripcion = models.CharField(max_length=1000, default='')
+    epoca = models.ForeignKey(
+        Epoca, blank=False, null=True, on_delete=models.CASCADE
     )
 
     def tipo_de_tema(self): #adobe kuler

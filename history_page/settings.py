@@ -118,13 +118,13 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False #True
 
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 STATICFILES_DIRS = (os.path.join(BASE_DIR, "static_dev"),)
 MEDIA_URL = "/media/"
@@ -139,3 +139,27 @@ LOGIN_URL = 'django.contrib.auth.views.logins'
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
 REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
 SITE_ID = 1
+
+'''
+# debug_toolbar moved here.
+if DEBUG:
+    MIDDLEWARE += [
+        "debug_toolbar.middleware.DebugToolbarMiddleware",
+    ]
+    INSTALLED_APPS += [
+        "debug_toolbar",
+    ]
+    INTERNAL_IPS = [
+        "127.0.0.1",
+    ]
+
+     # this is the main reason for not showing up the toolbar
+    import mimetypes
+
+    mimetypes.add_type("application/javascript", ".js", True)
+
+    DEBUG_TOOLBAR_CONFIG = {
+        "INTERCEPT_REDIRECTS": False,
+    }
+
+'''

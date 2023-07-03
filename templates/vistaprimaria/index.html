@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html>
-    <head>
+{% extends "layout.html" %}
+{% load i18n %}
 
-    </head>
-    <body>
-        <h1>Hola  {{nombre_sitio}}</h1>
-        <b>Hola</b>
+{% block content %}
+{% include "navbar.html" %}
 
-    </body>
-</html>
+{% include "carrousel_siglos.html" %}
+
+{% include "cards.html" %}
+{% include "carrousel_proyectos.html" %}
+{% include "footer.html" %}
+
+
+{% endblock %}

@@ -1,0 +1,220 @@
+p {
+  color: $color2; 
+  font-size: 20px;
+  width: 265px;
+  height: 110px;
+}
+
+.mi_parrafo {
+  color: #02F520;
+  background-color: $color2;
+}
+
+.color1{background-color:#632835;}
+.color2{background-color:#88d4a7;}
+.color3{background-color:#0CACF8;}
+
+.navbar {
+  background-image: url('/media/miscelanea/fondo1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar .navbar-brand {
+  color: $navbar-text-color;
+  font-weight: bold;
+}
+
+.navbar .nav-item .nav-link {
+  color: $navbar-text-color;
+}
+
+.navbar .nav-item.dropdown .dropdown-menu {
+  background-color: $navbar-bg-color;
+}
+
+.navbar .nav-item.dropdown .dropdown-item {
+  color: $navbar-text-color;
+}
+
+.custom-bg {
+  background-image: url('/media/miscelanea/fondo1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+#carouselExampleIndicators{
+  width: 100%;
+  max-width: none;
+  height: 100%;
+  max-height: none;
+  margin: 0 auto; 
+  position: relative; 
+  
+}
+
+#carousel-inner {
+  width: 100%;
+}
+
+#carousel-control-prev,
+#carousel-control-next {
+  width: 10%; 
+  top: 50%; 
+  transform: translateY(-50%); 
+  z-index: 10; 
+}
+
+#carousel-control-prev-icon,
+#carousel-control-next-icon {
+  background-color: transparent;
+}
+
+.carousel-image {
+  object-fit: cover;
+  max-height: 300px;
+  max-width: 100%; 
+}
+
+.carousel-item img {
+  object-fit: cover; 
+  width: 100%;
+  height: 100%;
+}
+
+
+#carouselExampleSlidesOnly{
+  max-height: 800px;
+  width: 100%;
+  max-width: none;
+  margin: 30px;
+  position: relative; 
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.9);
+  border-radius: 30px;
+  padding: 10px;
+  background-image: linear-gradient(to bottom,  #ffffff, #702626,);
+ 
+}
+
+.carousel-image_proy {
+  object-fit: cover;
+  max-height: 700px;
+  max-width: 100%; 
+  transition: opacity 2.5s ease;
+  border-radius: 30px;
+}
+
+
+
+
+.card-text {
+  color: #000000; /* Color deseado para el texto */
+}
+
+.card-container {
+  justify-content: space-between;
+  width: 100%;
+  max-width: none;
+  margin-left: 20px;
+  margin-right: 0;
+  margin-top: 30px;
+
+  
+  .card {
+    width: 25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background-image: url('/media/miscelanea/fondo1.jpg');
+    background-size: cover;
+    background-position: center;
+
+    .card-body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+
+    }
+    p.card-text {
+      text-align: center;
+      font-weight: bold;
+    }
+
+    img.card-img-top {
+      width: 100%;
+    }
+  }
+}
+
+.carousel_proy-title {
+  top: 50%;
+  left: 50%;
+
+  color: #a01c1c;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.about-container {
+  background-color: #926565;
+  color: #111111; 
+  padding: 20px;
+  margin: 30px;
+  margin-left: 60px;
+  height: 750px; 
+  width: 550px; 
+  overflow: auto;
+  border-radius: 30px;
+}
+
+.about-container h3 {
+  margin-top: 0;
+  font-size: 29px;
+}
+
+.about-container p {
+  margin-bottom: 0;
+  font-size: 15px;
+  color: #111111; 
+  font-weight: bold;
+
+}
+
+.container-video {
+
+  padding: 20px;
+  margin: 30px;
+}
+
+.about-image {
+  width: 200px;
+  height: 200px;
+  transform: translateX(50%);
+
+}
+
+.custom-footer {
+  height: auto; /* Ajusta el valor según el tamaño deseado */
+}
+
+.bg-custom-color {
+  background-color: #d38181; /* Color rojo personalizado */
+}
+
+.social-icons {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.social-icons li {
+  margin-right: 10px;
+}
+
+.social-icons li:last-child {
+  margin-right: 0;
+}
