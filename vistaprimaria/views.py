@@ -15,3 +15,6 @@ def index(request):
      params['continente']=continente
      print(continente)
      return render(request, 'vistaprimaria/index.html', params)
+
+def articulos(request):
+    return render(request, 'vistaprimaria/articulos.html')

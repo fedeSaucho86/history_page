@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*!
  * Bootstrap v5.1.3 (https://getbootstrap.com/)
  * Copyright 2011-2021 The Bootstrap Authors
@@ -13127,7 +13126,6 @@ p {
 /* line 111, ../../../../history_page/static_dev/scss/_header.scss */
 .card-text {
   color: #000000;
-  /* Color deseado para el texto */
 }
 
 /* line 115, ../../../../history_page/static_dev/scss/_header.scss */
@@ -13209,30 +13207,46 @@ p {
 
 /* line 186, ../../../../history_page/static_dev/scss/_header.scss */
 .container-video {
-  padding: 20px;
-  margin: 30px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 /* line 192, ../../../../history_page/static_dev/scss/_header.scss */
+.embed-responsive-16by9 {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+/* line 199, ../../../../history_page/static_dev/scss/_header.scss */
+.embed-responsive-16by9 iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 207, ../../../../history_page/static_dev/scss/_header.scss */
 .about-image {
   width: 200px;
   height: 200px;
   transform: translateX(50%);
 }
 
-/* line 199, ../../../../history_page/static_dev/scss/_header.scss */
+/* line 214, ../../../../history_page/static_dev/scss/_header.scss */
 .custom-footer {
   height: auto;
-  /* Ajusta el valor según el tamaño deseado */
 }
 
-/* line 203, ../../../../history_page/static_dev/scss/_header.scss */
+/* line 218, ../../../../history_page/static_dev/scss/_header.scss */
 .bg-custom-color {
   background-color: #d38181;
-  /* Color rojo personalizado */
 }
 
-/* line 207, ../../../../history_page/static_dev/scss/_header.scss */
+/* line 222, ../../../../history_page/static_dev/scss/_header.scss */
 .social-icons {
   display: flex;
   list-style: none;
@@ -13240,14 +13254,42 @@ p {
   margin: 0;
 }
 
-/* line 214, ../../../../history_page/static_dev/scss/_header.scss */
+/* line 229, ../../../../history_page/static_dev/scss/_header.scss */
 .social-icons li {
   margin-right: 10px;
 }
 
-/* line 218, ../../../../history_page/static_dev/scss/_header.scss */
+/* line 233, ../../../../history_page/static_dev/scss/_header.scss */
 .social-icons li:last-child {
   margin-right: 0;
+}
+
+/* line 237, ../../../../history_page/static_dev/scss/_header.scss */
+.paragraph p {
+  width: 100%;
+  color: #0d0e0d;
+}
+
+/* line 242, ../../../../history_page/static_dev/scss/_header.scss */
+.list-group {
+  background-color: transparent;
+  color: #944646;
+}
+
+/* line 246, ../../../../history_page/static_dev/scss/_header.scss */
+.list-group .list-group-item {
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  color: #430bdd;
+}
+
+/* line 254, ../../../../history_page/static_dev/scss/_header.scss */
+.my-form {
+  background-color: #9e5f5f;
+  display: flex;
+  align-items: center;
+  height: auto;
 }
 
 /*# sourceMappingURL=main.css.map */
