@@ -257,3 +257,41 @@ p {
   align-items: center;
   height: auto;
 }
+
+.my-form_log {
+  background-color: #9e5f5f;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  text-align: center;
+  margin-top: 40px;
+}
+
+.form-fields {
+  width: 100%;
+}
+
+.links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.link {
+  white-space: nowrap;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+

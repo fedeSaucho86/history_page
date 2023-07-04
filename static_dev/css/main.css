@@ -12988,7 +12988,7 @@ fieldset:disabled .btn {
 }
 
 /* COLORES */
-/* line 18, ../../../../history_page/static_dev/scss/_variables.scss */
+/* line 14, ../../../../history_page/static_dev/scss/_variables.scss */
 .navbar-spacing .nav-item {
   margin-right: 1000px;
 }
@@ -13290,6 +13290,40 @@ p {
   display: flex;
   align-items: center;
   height: auto;
+}
+
+/* line 261, ../../../../history_page/static_dev/scss/_header.scss */
+.my-form_log {
+  background-color: #9e5f5f;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* line 276, ../../../../history_page/static_dev/scss/_header.scss */
+.form-fields {
+  width: 100%;
+}
+
+/* line 280, ../../../../history_page/static_dev/scss/_header.scss */
+.links-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* line 286, ../../../../history_page/static_dev/scss/_header.scss */
+.link {
+  white-space: nowrap;
+  margin-top: 20px;
 }
 
 /*# sourceMappingURL=main.css.map */
